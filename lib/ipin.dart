@@ -1,6 +1,7 @@
 library ipin;
 
-import 'package:simple_rsa/simple_rsa.dart';
+// import 'package:simple_rsa/simple_rsa.dart';
+import 'package:crypton/crypton.dart';
 
 class Ipin {
   final String clearIpin;
@@ -9,8 +10,10 @@ class Ipin {
 
   Ipin({this.clearIpin, this.pubKey, this.uuid});
 
-  Future<String> encrypt() async {
-    String ipin = await encryptString(this.uuid + this.clearIpin, this.pubKey);
+  String encrypt() {
+    final k = RSAPublicKey.fromString(this.pubKey);
+    final ipin = k.encrypt(this.uuid + this.clearIpin);
+    // String ipin = await encryptString(this.uuid + this.clearIpin, this.pubKey);
     return ipin;
   }
 }
