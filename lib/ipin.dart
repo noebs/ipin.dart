@@ -1,8 +1,14 @@
+/// Library ipin implements ipin encryption for EBS / noebs
+/// payment cards in Sudan. It relies on crypton which uses only
+/// dart code and doesn't rely on any OS-specific SDKs for encryption
 library ipin;
 
-// import 'package:simple_rsa/simple_rsa.dart';
 import 'package:crypton/crypton.dart';
 
+/// Ipin is the base class for encrypting cards. [Ipin] constructor
+/// accepts [clearIpin] which is the raw clear IPIN we get from the user,
+/// and [uuid] a UUID v4 string and [pubKey] the public key we get from noebs apis.
+/// See more at https://docs.noebs.dev
 class Ipin {
   final String clearIpin;
   final String pubKey;

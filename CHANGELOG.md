@@ -1,3 +1,11 @@
+## [0.0.5] - 1/5/2021
+
+* adding library and class documentations.
+
+## [0.0.4] - 1/5/2021
+
+* update the package with proper examples set
+
 
 ## [0.0.3] - 1/5/2021
 
