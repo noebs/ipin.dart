@@ -14,7 +14,7 @@ class Ipin {
   final String pubKey;
   final String uuid;
 
-  Ipin({
+  const Ipin({
     required this.clearIpin,
     required this.pubKey,
     required this.uuid,
