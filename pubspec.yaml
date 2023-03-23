@@ -1,7 +1,7 @@
 name: ipin
 description: Ipin encryption for EBS / noebs. ipin uses a very simple interface to calculate encrypted ipin for both EBS / noebs use cases. ipin is battle tested and used in production by different companies.
 repository: "https://github.com/noebs/ipin.dart"
-version: 0.0.6
+version: 0.0.7
 homepage: "https://docs.noebs.dev"
 
 environment:
