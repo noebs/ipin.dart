@@ -14,12 +14,15 @@ class Ipin {
   final String pubKey;
   final String uuid;
 
-  Ipin({this.clearIpin, this.pubKey, this.uuid});
+  Ipin({
+    required this.clearIpin,
+    required this.pubKey,
+    required this.uuid,
+  });
 
   String encrypt() {
     final k = RSAPublicKey.fromString(this.pubKey);
     final ipin = k.encrypt(this.uuid + this.clearIpin);
-    // String ipin = await encryptString(this.uuid + this.clearIpin, this.pubKey);
     return ipin;
   }
 }
